@@ -166,5 +166,5 @@ export const cvData = {
       certificateUrl: "Certificate_CAE_DM.pdf"
     }
   ] as Language[],
-  extracurricular: ["Handball player (11 years)"]
+  extracurricular: ["High-Performance Athlete: Handball — 11 years", "Athens Programme: Augmented and Virtual Reality for Engineering"]
 };
