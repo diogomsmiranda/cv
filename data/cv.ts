@@ -42,43 +42,49 @@ export const cvData = {
   competencies: [
     {
       title: "Programming Languages",
-      items: ["Java", "C/C++", "Python"]
+      items: ["Java", "C/C++", "Python"],
     },
     {
       title: "Data and ML",
-      items: ["PyTorch", "NumPy", "Pandas", "scikit-learn"]
+      items: ["PyTorch", "NumPy", "Pandas", "scikit-learn"],
     },
     {
       title: "Web Dev",
-      items: ["HTML5", "JavaScript", "React", "Vue.js", "Tailwind CSS"]
+      items: ["HTML5", "JavaScript", "React", "Vue.js", "Tailwind CSS"],
     },
     {
       title: ".NET / Backend",
-      items: [".NET", "ASP.NET", "C#"]
+      items: [".NET", "ASP.NET", "C#"],
     },
     {
       title: "Databases",
-      items: ["MySQL", "PostgreSQL"]
+      items: ["MySQL", "PostgreSQL"],
     },
     {
       title: "DevOps / Tools",
-      items: ["Git", "Docker"]
+      items: ["Git", "Docker"],
     },
     {
       title: "Soft skills",
-      items: ["Critical thinking", "Communication", "Proactiveness", "Time Management", "Teamwork"]
-    }
+      items: [
+        "Critical thinking",
+        "Communication",
+        "Proactiveness",
+        "Time Management",
+        "Teamwork",
+      ],
+    },
   ] as CompetencyGroup[],
   experiences: [
     {
-      company: "Safegene Saúde Lda, Oeiras (Part-Time)",
-      role: "Operations Support",
-      period: "Mar 2019 - May 2020",
+      company: "JUNITEC",
+      role: "Backend Developer",
+      period: "Sept 2025 - Feb 2026",
       highlights: [
-        "Welcomed employees at COVID-19 testing events in multinational companies.",
-        "Managed and escorted attendees to testing areas in an international environment.",
-        "Developed communication and fast-thinking soft skills."
-      ]
+        "Designed and implemented an SSO login/logout flow with WSO2 (OIDC/OWIN), hardening session handling, cookies, and redirect behavior across browsers.",
+        "Delivered frontend updates to support the new authentication experience.",
+        "Collaborated with different software engineers, system administrators and managers to define requirements and UX.",
+      ],
     },
     {
       company: "Safegene Saúde Lda, Oeiras (Part-Time)",
@@ -89,8 +95,8 @@ export const cvData = {
         "Styled high-performance user interfaces with Tailwind CSS, ensuring mobile-first design and cross-browser consistency.",
         "Integrated frontend components with Node.js backends and RESTful APIs to deliver dynamic, data-driven content.",
         "Optimized application performance and SEO through Google Analytics and Google Tag Manager.",
-        "Maintained and updated legacy codebases, migrating key features to modern frameworks to reduce technical debt."
-      ]
+        "Maintained and updated legacy codebases, migrating key features to modern frameworks to reduce technical debt.",
+      ],
     },
     {
       company: "Department of Mechanical Engineering at IST",
@@ -98,8 +104,8 @@ export const cvData = {
       period: "Jan 2024 - Dec 2024",
       highlights: [
         "Managed the study room website, web server, database server, and remote-access computers.",
-        "Handled system administration tickets to resolve hardware and software issues."
-      ]
+        "Handled system administration tickets to resolve hardware and software issues.",
+      ],
     },
     {
       company: "JUNITEC",
@@ -108,18 +114,18 @@ export const cvData = {
       highlights: [
         "Developed an API for a renowned Portuguese bank to improve external integration and customer experience.",
         "Collaborated with stakeholders, software engineers, and product managers to define API requirements.",
-      ]
+      ],
     },
     {
-      company: "JUNITEC",
-      role: "Backend Developer",
-      period: "Sept 2025 - Feb 2026",
+      company: "Safegene Saúde Lda, Oeiras (Part-Time)",
+      role: "Operations Support",
+      period: "Mar 2019 - May 2020",
       highlights: [
-        "Designed and implemented an SSO login/logout flow with WSO2 (OIDC/OWIN), hardening session handling, cookies, and redirect behavior across browsers.",
-        "Delivered frontend updates to support the new authentication experience.",
-        "Collaborated with different software engineers, system administrators and managers to define requirements and UX."
-      ]
-    }
+        "Welcomed employees at COVID-19 testing events in multinational companies.",
+        "Managed and escorted attendees to testing areas in an international environment.",
+        "Developed communication and fast-thinking soft skills.",
+      ],
+    },
   ] as Experience[],
   openSource: [
     {
@@ -128,43 +134,46 @@ export const cvData = {
       period: "Dec 2023 - Feb 2025",
       highlights: [
         "CUBOS aims to be a simple yet powerful game engine for PC, where everything is made of voxels. It is open-source and free to use for any purpose. Written in modern C++ (20) with a data-oriented design in mind, its goal is to be performant and highly flexible.",
-        "Bug fixes and new features."
-      ]
+        "Bug fixes and new features.",
+      ],
     },
     {
       project: "Pandas",
       role: "Contributor",
       highlights: [
-        "Fixed a bug and implemented a feature that preserves cell notes when exporting with to_excel."
-      ]
-    }
+        "Fixed a bug and implemented a feature that preserves cell notes when exporting with to_excel.",
+      ],
+    },
   ] as OpenSourceItem[],
   education: [
     {
       title: "Bologna Master Degree in Computer Science and Engineering",
       institution: "Instituto Superior Técnico",
-      period: "Estimated graduation on October 2026."
+      period: "Estimated graduation on October 2026.",
     },
     {
       title: "Bologna Degree in Computer Science and Engineering",
       institution: "Instituto Superior Técnico",
-      period: "Graduated July 2024 — avg. 15"
+      period: "Graduated July 2024 — avg. 15",
     },
     {
       title: "High School",
-      institution: "Escola Secundário Luís Freitas Branco"
-    }
+      institution: "Escola Secundário Luís Freitas Branco",
+    },
   ] as Education[],
   languages: [
     {
       name: "Portuguese",
-      level: "Native"
+      level: "Native",
     },
     {
       name: "English",
       level: "C1 Level",
-      certificateUrl: "Certificate_CAE_DM.pdf"
-    }
+      certificateUrl: "Certificate_CAE_DM.pdf",
+    },
   ] as Language[],
-  extracurricular: ["High-Performance Athlete: Handball — 11 years", "Athens Programme: Augmented and Virtual Reality for Engineering"]
+  extracurricular: [
+    "High-Performance Athlete: Handball — 11 years",
+    "Athens Programme: Augmented and Virtual Reality for Engineering",
+  ],
 };
