@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       <section className="panel">
-        <h2>Key Competencies</h2>
+        <h2>Skills</h2>
         <div className="competency-grid">
           {cvData.competencies.map((group) => (
             <article
