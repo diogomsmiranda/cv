@@ -7,15 +7,16 @@ export default function Home() {
     { href: "#about", label: "About", icon: "fa-user" },
     { href: "#skills", label: "Skills", icon: "fa-screwdriver-wrench" },
     { href: "#experience", label: "Experience", icon: "fa-briefcase" },
+    { href: "#open-source", label: "Open Source", icon: "fa-code-branch" },
     { href: "#education", label: "Education", icon: "fa-graduation-cap" },
     { href: "#languages", label: "Languages", icon: "fa-language" },
-    { href: "#extra", label: "Extra", icon: "fa-medal" }
+    { href: "#extra", label: "Extra", icon: "fa-medal" },
   ];
   const relevantExperiences = cvData.experiences.filter(
-    (experience) => experience.category === "relevant"
+    (experience) => experience.category === "relevant",
   );
   const otherWorkExperiences = cvData.experiences.filter(
-    (experience) => experience.category === "other"
+    (experience) => experience.category === "other",
   );
 
   return (
@@ -147,6 +148,29 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="panel section-block" id="open-source">
+        <h2>Open Source</h2>
+        <div className="timeline">
+          {cvData.openSource.map((project) => (
+            <article
+              className="timeline-item"
+              key={`${project.project}-${project.role}`}
+            >
+              <div className="timeline-head">
+                <h3>{project.role}</h3>
+                {project.period ? <span>{project.period}</span> : null}
+              </div>
+              <p className="company">{project.project}</p>
+              <ul>
+                {project.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </section>
 
