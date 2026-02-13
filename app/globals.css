@@ -48,8 +48,16 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 8% 0%, color-mix(in srgb, var(--bg-accent) 68%, transparent), transparent 58%),
-    radial-gradient(circle at 90% 8%, color-mix(in srgb, var(--bg-accent) 46%, transparent), transparent 52%),
+    radial-gradient(
+      circle at 8% 0%,
+      color-mix(in srgb, var(--bg-accent) 68%, transparent),
+      transparent 58%
+    ),
+    radial-gradient(
+      circle at 90% 8%,
+      color-mix(in srgb, var(--bg-accent) 46%, transparent),
+      transparent 52%
+    ),
     var(--bg);
   color: var(--text);
   font-family: var(--font-body);
@@ -63,7 +71,7 @@ a {
 
 .page-shell {
   margin: 0 auto;
-  max-width: 980px;
+  max-width: 1000px;
   padding: 1.15rem 1.15rem 4rem;
   display: grid;
   gap: 1.1rem;
@@ -94,7 +102,10 @@ a {
   white-space: nowrap;
   text-align: center;
   font-weight: 600;
-  transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 .top-nav-link:hover {
@@ -184,7 +195,9 @@ h3 {
   font: inherit;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 180ms ease, background-color 180ms ease;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
 }
 
 .print-button {
@@ -225,7 +238,10 @@ h3 {
   text-decoration: none;
   font-size: 1rem;
   color: var(--text);
-  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
 }
 
 .icon-link i {
@@ -240,6 +256,10 @@ h3 {
 
 .contact-grid a,
 .contact-grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 0.75rem 0.8rem;
   background: var(--surface-strong);
   border: 1px solid var(--line);
@@ -250,24 +270,30 @@ h3 {
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.45rem;
 }
 
 .competency-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  gap: 0.9rem;
+  align-items: stretch;
 }
 
 .competency-group {
   border: 1px solid var(--line);
   border-radius: 1rem;
   background: var(--surface-strong);
-  padding: 0.9rem;
+  padding: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
 }
 
 .competency-group h3 {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0rem;
 }
 
 .competency-group--wide {
@@ -278,7 +304,7 @@ h3 {
   background: var(--chip-bg);
   color: var(--chip-text);
   border-radius: 999px;
-  padding: 0.35rem 0.8rem;
+  padding: 0.32rem 0.75rem;
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -390,6 +416,15 @@ ul {
   font-size: 0.9rem;
 }
 
+.panel,
+.timeline-item,
+.competency-group,
+.education-item,
+.language-card {
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -423,8 +458,19 @@ ul {
 }
 
 @media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    font-size: 10.5pt;
+  }
+
   body {
     background: #ffffff;
+    line-height: 1.36;
   }
 
   .top-nav,
@@ -438,5 +484,107 @@ ul {
     box-shadow: none;
     border: 1px solid #c6c9d3;
     background: #ffffff;
+    border-radius: 0.6rem;
+    padding: 0.7rem 0.8rem;
+    backdrop-filter: none;
+    animation: none;
+  }
+
+  .page-shell {
+    max-width: none;
+    padding: 0;
+    gap: 0.45rem;
+  }
+
+  h1 {
+    font-size: 23pt;
+  }
+
+  h2 {
+    font-size: 12.5pt;
+    margin-bottom: 0.45rem;
+  }
+
+  h3 {
+    font-size: 10.6pt;
+  }
+
+  h2::after {
+    background: #d8dde8;
+  }
+
+  .summary {
+    margin-top: 0.55rem;
+    max-width: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .contact-grid {
+    gap: 0.35rem;
+  }
+
+  .contact-grid a,
+  .contact-grid span {
+    padding: 0.34rem 0.45rem;
+    border-radius: 0.45rem;
+  }
+
+  .competency-grid,
+  .language-grid,
+  .timeline,
+  .education-list {
+    gap: 0.45rem;
+  }
+
+  .timeline-item,
+  .competency-group,
+  .education-item,
+  .language-card {
+    padding: 0.55rem;
+    border-radius: 0.45rem;
+  }
+
+  .experience-subsection+.experience-subsection {
+    margin-top: 0.75rem;
+  }
+
+  .chips {
+    gap: 0.28rem;
+  }
+
+  .chip {
+    font-size: 0.77rem;
+    padding: 0.14rem 0.45rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  li+li {
+    margin-top: 0.12rem;
+  }
+
+  .name-links {
+    margin-left: 0.35rem;
+  }
+
+  .icon-link {
+    border: 0;
+    background: transparent;
+    width: auto;
+    height: auto;
+    font-size: 0.95rem;
+  }
+
+  .language-link {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    text-decoration: underline;
   }
 }
