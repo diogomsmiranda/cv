@@ -154,11 +154,7 @@ export const cvData = {
     {
       title: "Bologna Degree in Computer Science and Engineering",
       institution: "Instituto Superior Técnico",
-      period: "Graduated July 2024 — avg. 15",
-    },
-    {
-      title: "High School",
-      institution: "Escola Secundário Luís Freitas Branco",
+      period: "Graduated July 2024 — grade 15/20",
     },
   ] as Education[],
   languages: [
