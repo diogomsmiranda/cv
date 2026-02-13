@@ -39,7 +39,7 @@ export const cvData = {
   githubUrl: "https://github.com/diogomsmiranda",
   linkedinUrl: "https://www.linkedin.com/in/diogomsmiranda/",
   summary:
-    "Final year of Master's in Computer Science and Engineering seeking professional experience in the field of computer science. Passionate about programming languages and game development. I am interested in all areas of Computer Science, with a special focus on Data Science, Artificial Intelligence, and Machine Learning.",
+    "Final-year MSc student in Computer Science and Engineering with hands-on experience building backend and frontend systems. I am especially interested in Machine Learning and Data Science, with open-source contributions to CUBOS and Pandas. I focus on writing clean, scalable code, from authentication flows and APIs to performant applications.",
   competencies: [
     {
       title: "Programming Languages",
@@ -122,7 +122,7 @@ export const cvData = {
       ],
     },
     {
-      company: "Mad Fox Labs",
+      company: "Mad Fox Labs (Part-Time)",
       role: "AI and Code Instructor",
       period: "Oct 2025 - Dec 2025",
       category: "other",
