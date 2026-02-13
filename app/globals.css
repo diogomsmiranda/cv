@@ -42,6 +42,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background:
     radial-gradient(circle at 8% 0%, color-mix(in srgb, var(--bg-accent) 68%, transparent), transparent 58%),
@@ -60,9 +64,50 @@ a {
 .page-shell {
   margin: 0 auto;
   max-width: 980px;
-  padding: 3rem 1.15rem 4rem;
+  padding: 1.15rem 1.15rem 4rem;
   display: grid;
   gap: 1.1rem;
+}
+
+.top-nav {
+  position: sticky;
+  top: 0.8rem;
+  z-index: 40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0;
+  overflow-x: auto;
+}
+
+.top-nav-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.8rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: var(--text);
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 600;
+  transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.top-nav-link:hover {
+  border-color: var(--line);
+  background: color-mix(in srgb, var(--chip-bg) 55%, transparent);
+}
+
+.top-nav-link i {
+  font-size: 0.95rem;
+}
+
+.section-block {
+  scroll-margin-top: 6rem;
 }
 
 .panel {
@@ -155,6 +200,7 @@ h3 {
 
 .theme-toggle:focus-visible,
 .print-button:focus-visible,
+.top-nav-link:focus-visible,
 .contact-grid a:focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 2px;
@@ -357,6 +403,11 @@ ul {
     flex-wrap: wrap;
   }
 
+  .top-nav {
+    top: 0;
+    border-radius: 0.9rem;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -367,6 +418,7 @@ ul {
     background: #ffffff;
   }
 
+  .top-nav,
   .hero-controls,
   .theme-toggle,
   .print-button {

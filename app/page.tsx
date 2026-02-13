@@ -3,9 +3,27 @@ import { PrintButton } from "@/components/PrintButton";
 import { cvData } from "@/data/cv";
 
 export default function Home() {
+  const sectionLinks = [
+    { href: "#about", label: "About", icon: "fa-user" },
+    { href: "#skills", label: "Skills", icon: "fa-screwdriver-wrench" },
+    { href: "#experience", label: "Experience", icon: "fa-briefcase" },
+    { href: "#education", label: "Education", icon: "fa-graduation-cap" },
+    { href: "#languages", label: "Languages", icon: "fa-language" },
+    { href: "#extra", label: "Extra", icon: "fa-medal" }
+  ];
+
   return (
     <main className="page-shell">
-      <section className="hero panel">
+      <nav aria-label="Section navigation" className="top-nav">
+        {sectionLinks.map((link) => (
+          <a className="top-nav-link" href={link.href} key={link.href}>
+            <i className={`fa-solid ${link.icon}`} aria-hidden="true" />
+            <span>{link.label}</span>
+          </a>
+        ))}
+      </nav>
+
+      <section className="hero panel section-block" id="about">
         <div>
           <p className="overline">Curriculum Vitae</p>
           <h1>
@@ -53,7 +71,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="panel">
+      <section className="panel section-block" id="skills">
         <h2>Skills</h2>
         <div className="competency-grid">
           {cvData.competencies.map((group) => (
@@ -78,7 +96,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="panel">
+      <section className="panel section-block" id="experience">
         <h2>Professional Experience</h2>
         <div className="timeline">
           {cvData.experiences.map((experience) => (
@@ -101,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="panel">
+      <section className="panel section-block" id="education">
         <h2>Education and Certifications</h2>
         <div className="education-list">
           {cvData.education.map((item) => (
@@ -117,7 +135,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="panel">
+      <section className="panel section-block" id="languages">
         <h2>Languages</h2>
         <div className="language-grid">
           {cvData.languages.map((language) => (
@@ -141,7 +159,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="panel">
+      <section className="panel section-block" id="extra">
         <h2>Extracurricular Activities</h2>
         <ul className="activity-list">
           {cvData.extracurricular.map((activity) => (
