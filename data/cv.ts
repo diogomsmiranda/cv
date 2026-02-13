@@ -167,7 +167,7 @@ export const cvData = {
       project: "Pandas",
       role: "Contributor",
       highlights: [
-        "Fixed a bug and implemented a feature that preserves cell notes when exporting with to_excel.",
+        "Implemented a fix for a bug with Timestamp units and designed a feature that preserves cell notes when exporting with to_excel.",
       ],
     },
   ] as OpenSourceItem[],
