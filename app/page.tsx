@@ -59,7 +59,9 @@ export default function Home() {
           {cvData.competencies.map((group) => (
             <article
               className={`competency-group${
-                group.title.toLowerCase() === "soft skills" ? " competency-group--wide" : ""
+                group.title.toLowerCase() === "soft skills"
+                  ? " competency-group--wide"
+                  : ""
               }`}
               key={group.title}
             >
@@ -71,6 +73,45 @@ export default function Home() {
                   </span>
                 ))}
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="panel">
+        <h2>Professional Experience</h2>
+        <div className="timeline">
+          {cvData.experiences.map((experience) => (
+            <article
+              className="timeline-item"
+              key={`${experience.company}-${experience.period}`}
+            >
+              <div className="timeline-head">
+                <h3>{experience.role}</h3>
+                <span>{experience.period}</span>
+              </div>
+              <p className="company">{experience.company}</p>
+              <ul>
+                {experience.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="panel">
+        <h2>Education and Certifications</h2>
+        <div className="education-list">
+          {cvData.education.map((item) => (
+            <article
+              className="education-item"
+              key={`${item.title}-${item.institution}`}
+            >
+              <h3>{item.title}</h3>
+              <p>{item.institution}</p>
+              {item.period ? <span>{item.period}</span> : null}
             </article>
           ))}
         </div>
@@ -95,59 +136,6 @@ export default function Home() {
                   </a>
                 ) : null}
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="panel">
-        <h2>Professional Experience</h2>
-        <div className="timeline">
-          {cvData.experiences.map((experience) => (
-            <article className="timeline-item" key={`${experience.company}-${experience.period}`}>
-              <div className="timeline-head">
-                <h3>{experience.role}</h3>
-                <span>{experience.period}</span>
-              </div>
-              <p className="company">{experience.company}</p>
-              <ul>
-                {experience.highlights.map((highlight) => (
-                  <li key={highlight}>{highlight}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="panel">
-        <h2>Open Source</h2>
-        <div className="timeline">
-          {cvData.openSource.map((project) => (
-            <article className="timeline-item" key={`${project.project}-${project.role}`}>
-              <div className="timeline-head">
-                <h3>{project.role}</h3>
-                {project.period ? <span>{project.period}</span> : null}
-              </div>
-              <p className="company">{project.project}</p>
-              <ul>
-                {project.highlights.map((highlight) => (
-                  <li key={highlight}>{highlight}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="panel">
-        <h2>Education and Certifications</h2>
-        <div className="education-list">
-          {cvData.education.map((item) => (
-            <article className="education-item" key={`${item.title}-${item.institution}`}>
-              <h3>{item.title}</h3>
-              <p>{item.institution}</p>
-              {item.period ? <span>{item.period}</span> : null}
             </article>
           ))}
         </div>
