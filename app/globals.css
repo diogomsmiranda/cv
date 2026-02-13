@@ -288,6 +288,15 @@ h3 {
   gap: 0.9rem;
 }
 
+.experience-subsection + .experience-subsection {
+  margin-top: 1.2rem;
+}
+
+.experience-subtitle {
+  margin-bottom: 0.75rem;
+  color: var(--text-soft);
+}
+
 .timeline-item {
   border: 1px solid var(--line);
   border-radius: 1rem;

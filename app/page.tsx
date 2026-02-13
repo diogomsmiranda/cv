@@ -11,6 +11,12 @@ export default function Home() {
     { href: "#languages", label: "Languages", icon: "fa-language" },
     { href: "#extra", label: "Extra", icon: "fa-medal" }
   ];
+  const relevantExperiences = cvData.experiences.filter(
+    (experience) => experience.category === "relevant"
+  );
+  const otherWorkExperiences = cvData.experiences.filter(
+    (experience) => experience.category === "other"
+  );
 
   return (
     <main className="page-shell">
@@ -98,24 +104,49 @@ export default function Home() {
 
       <section className="panel section-block" id="experience">
         <h2>Professional Experience</h2>
-        <div className="timeline">
-          {cvData.experiences.map((experience) => (
-            <article
-              className="timeline-item"
-              key={`${experience.company}-${experience.period}`}
-            >
-              <div className="timeline-head">
-                <h3>{experience.role}</h3>
-                <span>{experience.period}</span>
-              </div>
-              <p className="company">{experience.company}</p>
-              <ul>
-                {experience.highlights.map((highlight) => (
-                  <li key={highlight}>{highlight}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
+        <div className="experience-subsection">
+          <h3 className="experience-subtitle">Relevant Experience</h3>
+          <div className="timeline">
+            {relevantExperiences.map((experience) => (
+              <article
+                className="timeline-item"
+                key={`${experience.company}-${experience.period}-${experience.role}`}
+              >
+                <div className="timeline-head">
+                  <h3>{experience.role}</h3>
+                  <span>{experience.period}</span>
+                </div>
+                <p className="company">{experience.company}</p>
+                <ul>
+                  {experience.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="experience-subsection">
+          <h3 className="experience-subtitle">Other Work Experience</h3>
+          <div className="timeline">
+            {otherWorkExperiences.map((experience) => (
+              <article
+                className="timeline-item"
+                key={`${experience.company}-${experience.period}-${experience.role}`}
+              >
+                <div className="timeline-head">
+                  <h3>{experience.role}</h3>
+                  <span>{experience.period}</span>
+                </div>
+                <p className="company">{experience.company}</p>
+                <ul>
+                  {experience.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

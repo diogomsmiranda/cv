@@ -2,6 +2,7 @@ export type Experience = {
   company: string;
   role: string;
   period: string;
+  category: "relevant" | "other";
   highlights: string[];
 };
 
@@ -80,6 +81,7 @@ export const cvData = {
       company: "JUNITEC",
       role: "Backend Developer",
       period: "Sept 2025 - Feb 2026",
+      category: "relevant",
       highlights: [
         "Designed and implemented an SSO login/logout flow with WSO2 (OIDC/OWIN), hardening session handling, cookies, and redirect behavior across browsers.",
         "Delivered frontend updates to support the new authentication experience.",
@@ -90,6 +92,7 @@ export const cvData = {
       company: "Safegene Saúde Lda, Oeiras (Part-Time)",
       role: "Frontend Developer",
       period: "Aug 2023 - Dec 2025",
+      category: "relevant",
       highlights: [
         "Architected and deployed multiple responsive web applications using React.js and Next.js, improving brand presence and user engagement.",
         "Styled high-performance user interfaces with Tailwind CSS, ensuring mobile-first design and cross-browser consistency.",
@@ -102,6 +105,7 @@ export const cvData = {
       company: "Department of Mechanical Engineering at IST",
       role: "Systems Administrator",
       period: "Jan 2024 - Dec 2024",
+      category: "relevant",
       highlights: [
         "Managed the study room website, web server, database server, and remote-access computers.",
         "Handled system administration tickets to resolve hardware and software issues.",
@@ -111,15 +115,37 @@ export const cvData = {
       company: "JUNITEC",
       role: "Backend Developer",
       period: "Mar 2024 - Oct 2024",
+      category: "relevant",
       highlights: [
         "Developed an API for a renowned Portuguese bank to improve external integration and customer experience.",
         "Collaborated with stakeholders, software engineers, and product managers to define API requirements.",
       ],
     },
     {
+      company: "Mad Fox Labs",
+      role: "AI and Code Instructor",
+      period: "Oct 2025 - Dec 2025",
+      category: "other",
+      highlights: [
+        "Taught children aged 7-14 on different days of the week, covering both core AI and programming concepts.",
+        "Used Godot for introductory AI learning activities, and Scratch plus Godot for code-focused classes.",
+      ],
+    },
+    {
+      company: "Happy Code",
+      role: "Code Instructor",
+      period: "Apr 2022 - Aug 2022",
+      category: "other",
+      highlights: [
+        "Delivered programming classes during holiday camps for children aged 7-14, using Minecraft Education to teach core coding concepts.",
+        "Introduced the same group to Unity 3D fundamentals through hands-on game development activities.",
+      ],
+    },
+    {
       company: "Safegene Saúde Lda, Oeiras (Part-Time)",
       role: "Operations Support",
       period: "Mar 2019 - May 2020",
+      category: "other",
       highlights: [
         "Welcomed employees at COVID-19 testing events in multinational companies.",
         "Managed and escorted attendees to testing areas in an international environment.",
