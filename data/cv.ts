@@ -152,6 +152,11 @@ export const cvData = {
       period: "Estimated graduation on October 2026.",
     },
     {
+      title: "Outside Europe Programme (MSc exchange)",
+      institution: "Korea Aerospace University — Republic of Korea",
+      period: "Feb 2025 - Jul 2025",
+    },
+    {
       title: "Bologna Degree in Computer Science and Engineering",
       institution: "Instituto Superior Técnico",
       period: "Graduated July 2024 — grade 15/20",
@@ -169,7 +174,7 @@ export const cvData = {
     },
   ] as Language[],
   extracurricular: [
-    "High-Performance Athlete: Handball — 11 years",
+    "High-Performance Athlete: Handball — 11 years; represented: Sporting FC, Boa Hora FC, Os Belenenses",
     "Athens Programme: Augmented and Virtual Reality for Engineering",
   ],
 };
