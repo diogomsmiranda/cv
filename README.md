@@ -39,3 +39,6 @@ Push to `main`. The workflow at `.github/workflows/deploy.yml` builds and deploy
 ## Content source
 
 The CV content now lives in `data/cv.ts`. If you want to link PDFs (e.g., certificates), place them in `public/` and reference the filename.
+
+## License
+This project is licensed under CC BY-NC-SA 4.0. Personal use is encouraged! Commercial use or sale by third-party services is strictly prohibited.
